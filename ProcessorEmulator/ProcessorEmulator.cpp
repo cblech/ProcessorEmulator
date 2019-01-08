@@ -3,7 +3,7 @@
 #include "Debug.h"
 #include <string>
 #include "Bus.h"
-#include "Register.h"
+#include "Regist.h"
 
 
 namespace g {
@@ -20,7 +20,8 @@ ProcessorEmulator::ProcessorEmulator()
 	addressBus = Bus("address");
 	instructionBus = Bus("instruction");
 
-	registerB = Register(true, true, true, true, "B-Register");
+	registerB = Regist(true, true, true, true, "B-Register");
+	registerA = StatusRegister("A-Register");
 }
 
 
@@ -33,11 +34,17 @@ int main() {
 	//debug.info(emulator.addressBus.getName());
 	//debug.info(emulator.dataBus.getName());
 
-	emulator.addressBus.setValue(2);
+	emulator.addressBus.setValue(5);
 	emulator.addressBus.unSet();
-	emulator.addressBus.setValue(2);
+	emulator.addressBus.setValue(7);
 	emulator.dataBus.setValue(2);
-	emulator.dataBus.setValue(2);
+	emulator.dataBus.setValue(3);
+
+	emulator.registerB.readAddr();
+	emulator.registerB.writeData();
+
+	emulator.registerA.readData();
+	emulator.registerA.isNegativ();
 
 	system("pause");
 	return 0;

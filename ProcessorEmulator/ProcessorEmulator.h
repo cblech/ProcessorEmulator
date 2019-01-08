@@ -1,11 +1,13 @@
 #pragma once
 #include "Debug.h"
+#include "Regist.h"
 #include "Bus.h"
-#include "Register.h"
+#include "StatusRegister.h"
 
 
 class ProcessorEmulator
 {
+
 public:
 	ProcessorEmulator();
 	~ProcessorEmulator();
@@ -14,8 +16,9 @@ public:
 	Bus addressBus;
 	Bus instructionBus;
 
-	Register registerB;
-
+	
+	Regist registerB;
+	StatusRegister registerA;
 
 };
 

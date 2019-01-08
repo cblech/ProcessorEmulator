@@ -24,7 +24,10 @@
     <ClInclude Include="ProcessorEmulator.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Register.h">
+    <ClInclude Include="Regist.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusRegister.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,8 +41,14 @@
     <ClCompile Include="ProcessorEmulator.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Register.cpp">
+    <ClCompile Include="Regist.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="StatusRegister.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
