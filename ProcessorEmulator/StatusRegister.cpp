@@ -4,7 +4,8 @@
 
 StatusRegister::StatusRegister(std::string name)
 {
-	Regist(true,true,true,true,name);
+	this->name = name;
+	isCapableOf = IsCapableOf{ true,true,true,true };
 }
 
 
@@ -19,5 +20,10 @@ bool StatusRegister::isZero()
 
 bool StatusRegister::isNegativ()
 {
-	return Regist::value|0x7fff==0xffff;
+	return (Regist::value|0x7fff)==0xffff;
+}
+
+bool StatusRegister::isPositiv()
+{
+	return !isNegativ();
 }

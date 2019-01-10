@@ -36,7 +36,7 @@ int main() {
 
 	emulator.addressBus.setValue(5);
 	emulator.addressBus.unSet();
-	emulator.addressBus.setValue(7);
+	emulator.addressBus.setValue(0x7ffe);
 	emulator.dataBus.setValue(2);
 	emulator.dataBus.setValue(3);
 
@@ -44,7 +44,8 @@ int main() {
 	emulator.registerB.writeData();
 
 	emulator.registerA.readData();
-	emulator.registerA.isNegativ();
+	debug.info("Ist Negativ - " + std::string( emulator.registerA.isNegativ() ? "ja" : "nein"));
+	debug.info("Ist Positiv - " + std::string( emulator.registerA.isPositiv() ? "ja" : "nein"));
 
 	system("pause");
 	return 0;
