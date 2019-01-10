@@ -19,6 +19,8 @@ public:
 	void readAddr();
 	void writeAddr();
 
+	std::string dump();
+
 	struct IsCapableOf
 	{
 		bool WriteData = false;

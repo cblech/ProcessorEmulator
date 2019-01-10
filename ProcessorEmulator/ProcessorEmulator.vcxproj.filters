@@ -30,6 +30,12 @@
     <ClInclude Include="StatusRegister.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Ram.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bus.cpp">
@@ -45,6 +51,12 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="StatusRegister.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ram.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

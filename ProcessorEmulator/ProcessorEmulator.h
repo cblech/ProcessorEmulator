@@ -3,7 +3,7 @@
 #include "Regist.h"
 #include "Bus.h"
 #include "StatusRegister.h"
-
+#include "Ram.h"
 
 class ProcessorEmulator
 {
@@ -16,7 +16,8 @@ public:
 	Bus addressBus;
 	Bus instructionBus;
 
-	
+	Ram ram;
+
 	Regist registerB;
 	StatusRegister registerA;
 
