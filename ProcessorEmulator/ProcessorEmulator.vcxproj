@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClInclude Include="Bus.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="InstructionCount.h" />
     <ClInclude Include="InstuctionRegister.h" />
     <ClInclude Include="ProcessorEmulator.h" />
     <ClInclude Include="Ram.h" />
@@ -128,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="InstructionCount.cpp" />
     <ClCompile Include="InstuctionRegister.cpp" />
     <ClCompile Include="ProcessorEmulator.cpp" />
     <ClCompile Include="Ram.cpp" />
