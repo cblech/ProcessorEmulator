@@ -4,6 +4,7 @@
 #include "Bus.h"
 #include "StatusRegister.h"
 #include "Ram.h"
+#include "InstuctionRegister.h"
 
 class ProcessorEmulator
 {
@@ -21,6 +22,7 @@ public:
 	Regist registerB;
 	StatusRegister registerA;
 
+	InstuctionRegister instuctionRegister;
 };
 
 namespace g {

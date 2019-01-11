@@ -5,7 +5,6 @@
 StatusRegister::StatusRegister(std::string name)
 {
 	this->name = name;
-	isCapableOf = IsCapableOf{ true,true,true,true };
 }
 
 

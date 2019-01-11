@@ -1,6 +1,10 @@
 #include "Debug.h"
 #include<iostream>
 
+//#define ignoreInfo
+//#define ignoreWarning
+//#define ignoreError
+
 
 Debug::Debug()
 {

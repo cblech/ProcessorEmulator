@@ -22,8 +22,10 @@ ProcessorEmulator::ProcessorEmulator()
 
 	ram = Ram("Ram");
 
-	registerB = Regist(true, true, true, true, "B-Register");
+	registerB = Regist("B-Register");
 	registerA = StatusRegister("A-Register");
+
+	instuctionRegister = InstuctionRegister("Instuction-Register");
 }
 
 
@@ -55,6 +57,10 @@ int main() {
 
 	emulator.dataBus.setValue(100);
 	emulator.ram.readData();
+
+	emulator.instuctionRegister.readData();
+
+	debug.info(std::to_string(emulator.instuctionRegister.getValue()));
 
 	debug.info(emulator.ram.dump());
 	debug.info(emulator.ram.dump(20));

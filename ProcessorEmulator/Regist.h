@@ -6,11 +6,8 @@
 class Regist
 {
 public:
-	struct IsCapableOf;
 
 	Regist(std::string name = "");
-	Regist(bool wd,bool rd,bool wa, bool ra, std::string name = "");
-	Regist(IsCapableOf isCapableOf,std::string name = "");
 
 	~Regist();
 
@@ -21,18 +18,10 @@ public:
 
 	std::string dump();
 
-	struct IsCapableOf
-	{
-		bool WriteData = false;
-		bool ReadData = false;
-		bool WriteAddr = false;
-		bool ReadAddr = false;
-	};
 
 protected:
 	std::string name;
 
-	IsCapableOf isCapableOf;
 	unsigned short value = 0;
 };
 

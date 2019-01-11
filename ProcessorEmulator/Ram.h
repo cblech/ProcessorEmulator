@@ -19,6 +19,9 @@ public:
 	void writeData();
 	void readData();
 
+	void readAddr() = delete;
+	void writeAddr() = delete;
+
 	std::string dump();
 
 	std::string dump(short pos);
