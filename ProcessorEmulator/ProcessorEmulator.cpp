@@ -26,6 +26,8 @@ ProcessorEmulator::ProcessorEmulator()
 	registerA = StatusRegister("A-Register");
 
 	instuctionRegister = InstuctionRegister("Instuction-Register");
+
+	rechenwerk = Rechenwerk("Rechenwerk");
 }
 
 
@@ -40,12 +42,20 @@ int main() {
 	emulator.ram.loadFromFile("ram.txt");
 
 
-	debug.info(emulator.ram.dump());
-	debug.info(emulator.ram.dump(1));
-	debug.info(emulator.ram.dump(2));
-	debug.info(emulator.ram.dump(3));
-	debug.info(emulator.ram.dump(9));
-	debug.info(emulator.ram.dump(100));
+	emulator.addressBus.setValue(0);
+	emulator.ram.writeData();
+	emulator.rechenwerk.readData();
+
+	emulator.addressBus.setValue(4);
+	emulator.ram.writeData();
+	emulator.rechenwerk.subData();
+	debug.info(emulator.rechenwerk.dump());
+
+	emulator.rechenwerk.invert();
+	emulator.rechenwerk.increment();
+	debug.info(emulator.rechenwerk.dump());
+
+
 
 	system("pause");
 	return 0;

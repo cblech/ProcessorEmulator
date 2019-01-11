@@ -120,6 +120,7 @@
     <ClInclude Include="InstuctionRegister.h" />
     <ClInclude Include="ProcessorEmulator.h" />
     <ClInclude Include="Ram.h" />
+    <ClInclude Include="Rechenwerk.h" />
     <ClInclude Include="Regist.h" />
     <ClInclude Include="StatusRegister.h" />
     <ClInclude Include="Util.h" />
@@ -130,6 +131,7 @@
     <ClCompile Include="InstuctionRegister.cpp" />
     <ClCompile Include="ProcessorEmulator.cpp" />
     <ClCompile Include="Ram.cpp" />
+    <ClCompile Include="Rechenwerk.cpp" />
     <ClCompile Include="Regist.cpp" />
     <ClCompile Include="StatusRegister.cpp" />
     <ClCompile Include="Util.cpp" />

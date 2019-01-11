@@ -1,6 +1,7 @@
 #include "Regist.h"
 #include <string>
 #include "ProcessorEmulator.h"
+#include "Util.h"
 
 //#define outAllWrites
 
@@ -53,5 +54,5 @@ void Regist::writeAddr()
 
 std::string Regist::dump()
 {
-	return "Register '" + name + "' has Value: " + std::to_string(value);
+	return "Register '" + name + "' has Value: " + std::to_string(value)+" ("+util::to_hex(value)+")";
 }
