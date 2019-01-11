@@ -1,6 +1,9 @@
 #include "Ram.h"
 #include "ProcessorEmulator.h"
 #include "Util.h"
+#include <fstream>
+#include <sstream>
+#include <string>
 
 Ram::Ram()
 {	
@@ -59,5 +62,24 @@ std::string Ram::dump(short pos)
 		+ "' has Value " + std::to_string(value[pos])
 		+ " (" + util::to_hex(value[pos])
 		+ ") at Address " + std::to_string(pos) + ".";
+}
+
+void Ram::loadFromFile(std::string file)
+{
+	std::ifstream myfile;
+	myfile.open("ram.txt");
+
+	
+
+	std::string line;
+	for (int i = 1;std::getline(myfile, line);i++)
+	{
+
+		std::istringstream iss(line);
+		int a;
+		if (!(iss >>a)) { break; } // error
+
+		value[i]=a;
+	}
 }
 

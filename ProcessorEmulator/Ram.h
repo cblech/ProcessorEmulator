@@ -26,6 +26,8 @@ public:
 
 	std::string dump(short pos);
 
+	void loadFromFile(std::string file);
+
 private:
 	short value[0xffff] = { 0 };
 };
