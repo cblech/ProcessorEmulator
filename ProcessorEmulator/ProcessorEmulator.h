@@ -6,6 +6,7 @@
 #include "Ram.h"
 #include "InstuctionRegister.h"
 #include "Rechenwerk.h"
+#include "InstructionCount.h"
 
 class ProcessorEmulator
 {
@@ -22,6 +23,7 @@ public:
 
 	Regist registerB;
 	StatusRegister registerA;
+	InstructionCount instructionCounter;
 
 	InstuctionRegister instuctionRegister;
 

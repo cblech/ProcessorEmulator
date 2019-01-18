@@ -4,6 +4,7 @@
 #include <string>
 #include "Bus.h"
 #include "Regist.h"
+#include "InstructionCount.h"
 
 
 namespace g {
@@ -26,6 +27,7 @@ ProcessorEmulator::ProcessorEmulator()
 	registerA = StatusRegister("A-Register");
 
 	instuctionRegister = InstuctionRegister("Instuction-Register");
+	instructionCounter = InstructionCount("Instruction Counter");
 
 	rechenwerk = Rechenwerk("Rechenwerk");
 }

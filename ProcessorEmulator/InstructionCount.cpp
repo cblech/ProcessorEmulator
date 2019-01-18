@@ -6,6 +6,11 @@ InstructionCount::InstructionCount()
 {
 }
 
+InstructionCount::InstructionCount(std::string name)
+{
+	this->name = name;
+}
+
 
 InstructionCount::~InstructionCount()
 {
