@@ -1,11 +1,5 @@
 ﻿  Bus.cpp
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.h(17): error C3646: "registerB": Unbekannter Überschreibungsspezifizierer
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.h(17): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
   ProcessorEmulator.cpp
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.h(17): error C3646: "registerB": Unbekannter Überschreibungsspezifizierer
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.h(17): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.cpp(23): error C2065: "registerB": nichtdeklarierter Bezeichner
   Register.cpp
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.h(17): error C3646: "registerB": Unbekannter Überschreibungsspezifizierer
-c:\users\jonathan\documents\visual studio 2017\projects\processoremulator\processoremulator\processoremulator.h(17): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
   Code wird generiert...
+  ProcessorEmulator.vcxproj -> C:\Users\jonathan\Documents\Visual Studio 2017\Projects\ProcessorEmulator\Debug\ProcessorEmulator.exe

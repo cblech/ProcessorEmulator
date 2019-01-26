@@ -1,5 +1,6 @@
 #include "Register.h"
 #include <string>
+#include "ProcessorEmulator.h"
 
 
 Register::Register(std::string name)
