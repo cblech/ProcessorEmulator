@@ -3,7 +3,7 @@
 class Bus
 {
 private:
-	unsigned int value;
+	unsigned short value;
 	bool defined;
 	std::string name;
 public:

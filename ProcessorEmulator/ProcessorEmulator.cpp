@@ -3,7 +3,8 @@
 #include "Debug.h"
 #include <string>
 #include "Bus.h"
-#include "Register.h"
+#include "Regist.h"
+#include "InstructionCount.h"
 
 
 namespace g {
@@ -20,7 +21,15 @@ ProcessorEmulator::ProcessorEmulator()
 	addressBus = Bus("address");
 	instructionBus = Bus("instruction");
 
-	registerB = Register(true, true, true, true, "B-Register");
+	ram = Ram("Ram");
+
+	registerB = Regist("B-Register");
+	registerA = StatusRegister("A-Register");
+
+	instuctionRegister = InstuctionRegister("Instuction-Register");
+	instructionCounter = InstructionCount("Instruction Counter");
+
+	rechenwerk = Rechenwerk("Rechenwerk");
 }
 
 
@@ -32,12 +41,23 @@ int main() {
 
 	//debug.info(emulator.addressBus.getName());
 	//debug.info(emulator.dataBus.getName());
+	emulator.ram.loadFromFile("ram.txt");
 
-	emulator.addressBus.setValue(2);
-	emulator.addressBus.unSet();
-	emulator.addressBus.setValue(2);
-	emulator.dataBus.setValue(2);
-	emulator.dataBus.setValue(2);
+
+	emulator.addressBus.setValue(0);
+	emulator.ram.writeData();
+	emulator.rechenwerk.readData();
+
+	emulator.addressBus.setValue(4);
+	emulator.ram.writeData();
+	emulator.rechenwerk.subData();
+	debug.info(emulator.rechenwerk.dump());
+
+	emulator.rechenwerk.invert();
+	emulator.rechenwerk.increment();
+	debug.info(emulator.rechenwerk.dump());
+
+
 
 	system("pause");
 	return 0;

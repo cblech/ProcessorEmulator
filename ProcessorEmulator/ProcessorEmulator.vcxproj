@@ -117,14 +117,32 @@
   <ItemGroup>
     <ClInclude Include="Bus.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="InstructionCount.h" />
+    <ClInclude Include="InstuctionRegister.h" />
     <ClInclude Include="ProcessorEmulator.h" />
-    <ClInclude Include="Register.h" />
+    <ClInclude Include="Ram.h" />
+    <ClInclude Include="Rechenwerk.h" />
+    <ClInclude Include="Regist.h" />
+    <ClInclude Include="StatusRegister.h" />
+    <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="InstructionCount.cpp" />
+    <ClCompile Include="InstuctionRegister.cpp" />
     <ClCompile Include="ProcessorEmulator.cpp" />
-    <ClCompile Include="Register.cpp" />
+    <ClCompile Include="Ram.cpp" />
+    <ClCompile Include="Rechenwerk.cpp" />
+    <ClCompile Include="Regist.cpp" />
+    <ClCompile Include="StatusRegister.cpp" />
+    <ClCompile Include="Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ram.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

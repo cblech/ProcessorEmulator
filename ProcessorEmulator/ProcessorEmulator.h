@@ -1,11 +1,16 @@
 #pragma once
 #include "Debug.h"
+#include "Regist.h"
 #include "Bus.h"
-#include "Register.h"
-
+#include "StatusRegister.h"
+#include "Ram.h"
+#include "InstuctionRegister.h"
+#include "Rechenwerk.h"
+#include "InstructionCount.h"
 
 class ProcessorEmulator
 {
+
 public:
 	ProcessorEmulator();
 	~ProcessorEmulator();
@@ -14,9 +19,15 @@ public:
 	Bus addressBus;
 	Bus instructionBus;
 
-	Register registerB;
+	Ram ram;
 
+	Regist registerB;
+	StatusRegister registerA;
+	InstructionCount instructionCounter;
 
+	InstuctionRegister instuctionRegister;
+
+	Rechenwerk rechenwerk;
 };
 
 namespace g {
