@@ -84,7 +84,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\jonathan\Documents\Visual Studio 2017\Libs\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\jonathan\Documents\Visual Studio 2017\Libs\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies> sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -108,17 +113,25 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\jonathan\Documents\Visual Studio 2017\Libs\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\jonathan\Documents\Visual Studio 2017\Libs\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-network.lib;sfml-audio.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Beschreibung.h" />
     <ClInclude Include="Bus.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="EmuWindow.h" />
+    <ClInclude Include="GrHexAusgabe.h" />
+    <ClInclude Include="GrSignalGetIndicator.h" />
     <ClInclude Include="InstructionCount.h" />
     <ClInclude Include="InstuctionRegister.h" />
+    <ClInclude Include="MyDrawable.h" />
     <ClInclude Include="ProcessorEmulator.h" />
     <ClInclude Include="Ram.h" />
     <ClInclude Include="Rechenwerk.h" />
@@ -127,10 +140,15 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Beschreibung.cpp" />
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="EmuWindow.cpp" />
+    <ClCompile Include="GrHexAusgabe.cpp" />
+    <ClCompile Include="GrSignalGetIndicator.cpp" />
     <ClCompile Include="InstructionCount.cpp" />
     <ClCompile Include="InstuctionRegister.cpp" />
+    <ClCompile Include="MyDrawable.cpp" />
     <ClCompile Include="ProcessorEmulator.cpp" />
     <ClCompile Include="Ram.cpp" />
     <ClCompile Include="Rechenwerk.cpp" />

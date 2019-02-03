@@ -7,6 +7,7 @@
 #include "InstuctionRegister.h"
 #include "Rechenwerk.h"
 #include "InstructionCount.h"
+#include "EmuWindow.h"
 
 class ProcessorEmulator
 {
@@ -33,4 +34,5 @@ public:
 namespace g {
 	extern Debug debug;
 	extern ProcessorEmulator emulator;
+	extern WindowData wd;
 }

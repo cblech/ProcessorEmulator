@@ -5,15 +5,20 @@
 #include "Bus.h"
 #include "Regist.h"
 #include "InstructionCount.h"
+#include "EmuWindow.h"
+#include <thread>
+#include <chrono>
 
 
 namespace g {
 	Debug debug;
 	ProcessorEmulator emulator;
+	WindowData wd = { 0 };
 }
 
 #define debug g::debug
 #define emulator g::emulator
+#define wd g::wd
 
 ProcessorEmulator::ProcessorEmulator()
 {
@@ -58,8 +63,24 @@ int main() {
 	debug.info(emulator.rechenwerk.dump());
 
 
+	EmuWindow ew(&wd);
+	std::thread tr(&EmuWindow::run,&ew);
 
-	system("pause");
+	debug.info("thread running...");
+
+	for (int i = 0; i < 0xffff;i++)
+	{
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		wd.rechenwerk = i;
+		wd.dataBus = 5+i*3;
+		wd.addressBus = 20+((i*5)-12);
+		wd.ram = -i;
+	}
+
+
+	tr.join();
+
+	//system("pause");
 	return 0;
 }
 
