@@ -24,7 +24,7 @@ void Beschreibung::init(std::string text, DescFlags flags)
 
 	this->text.setFont(*fontDesc);
 	this->text.setCharacterSize(10);
-	this->text.setFillColor(sf::Color::Black);
+	this->text.setColor(sf::Color::Black);
 	this->text.setPosition(position);
 	if ((flags&DescFlags::rechtsBuendig) == DescFlags::rechtsBuendig)
 	{

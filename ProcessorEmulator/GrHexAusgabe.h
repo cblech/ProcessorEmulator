@@ -1,5 +1,6 @@
 #pragma once
-#include "SFML\Graphics.hpp"
+#include <memory>
+#include <SFML/Graphics.hpp>
 #include "MyDrawable.h"
 
 class GrHexAusgabe: public MyDrawable

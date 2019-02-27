@@ -1,6 +1,6 @@
 #include "GrHexAusgabe.h"
 #include "Util.h"
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 
 void GrHexAusgabe::setText(unsigned short s)
@@ -33,7 +33,7 @@ void GrHexAusgabe::init()
 	drawables.push_back(&border);
 
 	textBackground = sf::Text("~~~~", *fontSegment, 20);
-	textBackground.setFillColor(sf::Color(200,200,200));
+	textBackground.setColor(sf::Color(200,200,200));
 	textBackground.setPosition(position + sf::Vector2f(15.f, 6.f));
 	drawables.push_back(&textBackground);
 
@@ -41,7 +41,7 @@ void GrHexAusgabe::init()
 	text.setFont(*fontSegment);
 	text.setString("Test");
 	text.setCharacterSize(20);
-	text.setFillColor(sf::Color::Black);
+	text.setColor(sf::Color::Black);
 	text.setPosition(position + sf::Vector2f(15.f, 6.f));
 	drawables.push_back(&text);
 
