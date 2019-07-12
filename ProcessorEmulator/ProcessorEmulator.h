@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include "Debug.h"
 #include "Regist.h"
 #include "Bus.h"

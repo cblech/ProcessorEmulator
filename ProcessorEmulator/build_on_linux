@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# make sure that libsfml-dev is installed
+
+g++ -std=gnu++11 -o ProcessorEmulator *.cpp -lsfml-window -lsfml-audio -lsfml-graphics -lsfml-system -lpthread
+

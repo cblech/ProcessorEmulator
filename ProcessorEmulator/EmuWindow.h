@@ -1,5 +1,5 @@
 #pragma once
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 #include <list>
 #include "MyDrawable.h"
 #include "GrHexAusgabe.h"

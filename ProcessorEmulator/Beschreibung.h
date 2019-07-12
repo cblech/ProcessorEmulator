@@ -1,6 +1,7 @@
 #pragma once
+#include <memory>
 #include "MyDrawable.h"
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 enum DescFlags :int
 {

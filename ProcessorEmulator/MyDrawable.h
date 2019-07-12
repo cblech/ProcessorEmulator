@@ -1,5 +1,5 @@
 #pragma once
-#include "SFML\Graphics.hpp"
+#include <SFML/Graphics.hpp>
 #include <list>
 
 #define colorPositive sf::Color(59, 235, 0,255)
